@@ -13,7 +13,7 @@ public class StringCalculator {
 	
 	
 	public String add(String numbers){
-		String result = numbers;
+		String result = "0";
 		if(numbers.compareTo("")!=0){
 			Pattern pattern = Pattern.compile("-?\\d+");
 			Matcher matcher = pattern.matcher(numbers);
@@ -22,12 +22,6 @@ public class StringCalculator {
 	        	sum += Integer.valueOf(matcher.group());
 	        }
 	        result = sum + "";
-	        if (result.compareTo("0") == 0 && !matcher.matches()) {
-	        	result = "";
-	        }
-	        if(result.compareTo("") == 0){
-	        	result = "0";
-	        }
 		}
 		
 		return result;

@@ -24,7 +24,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void testAddEmpty() {
-		assertEquals( "",stringCalculator.add(""));
+		assertEquals( "0",stringCalculator.add(""));
 	}
 	
 	@Test
