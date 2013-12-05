@@ -63,8 +63,8 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void testAddHandleNoNumbers() {
-		assertEquals( "", stringCalculator.add(";"));
-		assertEquals( "", stringCalculator.add(";;"));
-		assertEquals( "", stringCalculator.add(";\\n;"));
+		assertEquals( "0", stringCalculator.add(";"));
+		assertEquals( "0", stringCalculator.add(";;"));
+		assertEquals( "0", stringCalculator.add(";\\n;"));
 	}
 }

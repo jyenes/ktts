@@ -25,6 +25,9 @@ public class StringCalculator {
 	        if (result.compareTo("0") == 0 && !matcher.matches()) {
 	        	result = "";
 	        }
+	        if(result.compareTo("") == 0){
+	        	result = "0";
+	        }
 		}
 		
 		return result;
