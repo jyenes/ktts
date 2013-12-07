@@ -15,17 +15,6 @@ public class RomanNumeralsTest {
 	}
 	
 	@Test
-	public void basicTest() {
-		assertEquals( "I",romanNumerals.conver(1));
-		assertEquals( "V",romanNumerals.conver(5));
-		assertEquals( "X",romanNumerals.conver(10));
-		assertEquals( "L",romanNumerals.conver(50));
-		assertEquals( "C",romanNumerals.conver(100));
-		assertEquals( "D",romanNumerals.conver(500));
-		assertEquals( "M",romanNumerals.conver(1000));
-	}
-	
-	@Test
 	public void digitsUnder3Test() {
 		assertEquals( "I",romanNumerals.conver(1));
 		assertEquals( "II",romanNumerals.conver(2));
@@ -35,6 +24,18 @@ public class RomanNumeralsTest {
 	@Test
 	public void FourTest() {
 		assertEquals( "IV",romanNumerals.conver(4));
+	}
+	
+	@Test
+	public void FiveTest() {
+		assertEquals( "V",romanNumerals.conver(5));
+	}
+	
+	@Test
+	public void sixSevenEightTest() {
+		assertEquals( "VI",romanNumerals.conver(6));
+//		assertEquals( "VI",romanNumerals.conver(7));
+//		assertEquals( "VI",romanNumerals.conver(8));
 	}
 
 }
