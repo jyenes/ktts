@@ -34,8 +34,8 @@ public class RomanNumeralsTest {
 	@Test
 	public void sixSevenEightTest() {
 		assertEquals( "VI",romanNumerals.conver(6));
-//		assertEquals( "VI",romanNumerals.conver(7));
-//		assertEquals( "VI",romanNumerals.conver(8));
+		assertEquals( "VII",romanNumerals.conver(7));
+		assertEquals( "VIII",romanNumerals.conver(8));
 	}
 
 }

@@ -9,7 +9,7 @@ public class RomanNumerals {
 
 		int rest = dec;
 		result = new StringBuilder();
-		if (dec == 6){
+		if (dec >5){
 			rest -= 5;
 			result.append("V");
 		}
