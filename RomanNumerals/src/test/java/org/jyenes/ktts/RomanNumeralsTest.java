@@ -31,5 +31,10 @@ public class RomanNumeralsTest {
 		assertEquals( "II",romanNumerals.conver(2));
 		assertEquals( "III",romanNumerals.conver(3));
 	}
+	
+	@Test
+	public void FourTest() {
+		assertEquals( "IV",romanNumerals.conver(4));
+	}
 
 }
