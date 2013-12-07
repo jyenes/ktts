@@ -11,16 +11,14 @@ public class RomanNumerals {
 		if (dec == 9){
 			return "IX";
 		}
-		if (dec >5){
+		if (rest >=5){
 			rest -= 5;
 			result.append("V");
 		}
-		if (dec == 5){
-			return "V";
-		}
 		
-		if (dec == 4) {
-			return "IV";
+		if (rest == 4) {
+			rest -=4;
+			result.append("IV");
 		}
 
 		for (int i = 0; i < rest; i++) {
