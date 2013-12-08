@@ -42,9 +42,21 @@ public class RomanNumeralsTest {
 	public void nineTest() {
 		assertEquals( "IX",romanNumerals.conver(9));
 	}
+	
 	@Test
 	public void tenTest() {
 		assertEquals( "X",romanNumerals.conver(10));
+	}
+	
+	@Test
+	public void moreTest() {
+		assertEquals( "M",romanNumerals.conver(1000));
+		assertEquals( "CM",romanNumerals.conver(900));
+		assertEquals( "DCCCLVII",romanNumerals.conver(857));
+		assertEquals( "CXXIII",romanNumerals.conver(123));
+		assertEquals( "DCCLXXVII",romanNumerals.conver(777));
+		assertEquals( "MCMXCIX",romanNumerals.conver(1999));
+		assertEquals( "CDXLIV",romanNumerals.conver(444));
 	}
 
 }
