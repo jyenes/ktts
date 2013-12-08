@@ -1,28 +1,27 @@
 package org.jyenes.ktts;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class RomanNumerals {
 
-	Map<Integer,String> decToRoman;
-	
+	private static final int[] decimals = {10,9,5,4};
+	private static final String[] romans = {"X", "IX", "V", "IV"};
 
 	public String conver(int dec) {
-		decToRoman = new HashMap<Integer,String>();
-		decToRoman.put(10, "X");
-		decToRoman.put(9, "IX");
-		decToRoman.put(5, "V");
-		decToRoman.put(4, "IV");
+
 		
 		StringBuilder result = null;
 		int rest = dec;
 		result = new StringBuilder();
-		rest = appendRoman(result, rest, 10);
-		rest = appendRoman(result, rest, 9);
-		rest = appendRoman(result, rest, 5);
-		rest = appendRoman(result, rest, 4);
+		for(int i = 0; i< decimals.length; i++){
+			rest = appendRoman(result, rest, decimals[i], romans[i]);
+			
+		}
+
 
 		for (int i = 0; i < rest; i++) {
 			result.append("I");
@@ -31,12 +30,12 @@ public class RomanNumerals {
 
 	}
 
-	private int appendRoman(StringBuilder builder, int rest, int val) {
+	private int appendRoman(StringBuilder builder, int rest, int val, String roman) {
 		
 		int result = rest;
 		if (result >= val) {
 			result -= val;
-			builder.append(decToRoman.get(val));
+			builder.append(roman);
 		}
 		return result;
 	}
